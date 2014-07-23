@@ -7,3 +7,14 @@ function argsTest (_a, _b, _c) {
 	console.log(arguments[1]);// второй элемент этого массива
 } 
 argsTest(12, 33, 52);
+
+function max () {
+	var m = Number.NEGATIVE_INFINITY;// -бесконечность (самое маленькое число)
+
+	for ( var i = 0; i < arguments.length; i++ ) {
+		if (arguments[i] > m) m = arguments[i]; 
+	}
+
+	return m;
+}
+console.log( max(23, 51, 26, 345) );
